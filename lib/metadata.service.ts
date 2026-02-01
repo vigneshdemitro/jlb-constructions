@@ -1,11 +1,12 @@
 /**
  * Metadata Service
- * Fetches site metadata from Google Drive or local JSON file
+ * Fetches site metadata from embedded data or Google Drive
  * Caches results for performance
  */
 
 import { SiteMetadata, Project } from '@/lib/types';
 import { listGoogleDriveFolder, GDRIVE_CONFIG } from '@/lib/gdrive.config';
+import { SITE_METADATA } from '@/lib/metadata.data';
 
 // Cache metadata to avoid repeated API calls
 let metadataCache: SiteMetadata | null = null;
@@ -14,7 +15,7 @@ const CACHE_DURATION = 1000 * 60 * 60; // 1 hour in milliseconds
 
 /**
  * Fetch metadata from multiple sources
- * Priority: 1) Local JSON file 2) Google Drive JSON file 3) Build-time metadata
+ * Priority: 1) Google Drive JSON file 2) Embedded metadata data
  */
 export async function fetchSiteMetadata(): Promise<SiteMetadata> {
   // Return cached data if still valid
@@ -33,15 +34,14 @@ export async function fetchSiteMetadata(): Promise<SiteMetadata> {
       }
     }
 
-    // Fallback to local JSON file
-    const metadata = await fetchMetadataFromLocalFile();
-    metadataCache = metadata;
+    // Fallback to embedded metadata data (works at build time and runtime)
+    metadataCache = SITE_METADATA;
     cacheTimestamp = Date.now();
-    return metadata;
+    return SITE_METADATA;
   } catch (error) {
     console.error('Error fetching metadata:', error);
-    // Return empty template if all methods fail
-    return getDefaultMetadata();
+    // Return embedded metadata as fallback
+    return SITE_METADATA;
   }
 }
 
@@ -97,38 +97,6 @@ async function fetchMetadataFromGoogleDrive(): Promise<SiteMetadata | null> {
 }
 
 /**
- * Fetch metadata from local JSON file (fallback)
- * Place metadata.json in public/data/ folder
- */
-async function fetchMetadataFromLocalFile(): Promise<SiteMetadata> {
-  try {
-    const response = await fetch('/data/metadata.json');
-
-    if (!response.ok) {
-      throw new Error('metadata.json not found');
-    }
-
-    const metadata = await response.json();
-
-    // Convert file names to Google Drive URLs if IDs are provided
-    if (metadata.projects) {
-      metadata.projects = metadata.projects.map((project: Project) => ({
-        ...project,
-        images: project.images.map((img) => ({
-          ...img,
-        //   url: img.id ? getGoogleDriveImageUrl(img.id) : img.url,
-        })),
-      }));
-    }
-
-    return metadata as SiteMetadata;
-  } catch (error) {
-    console.error('Error fetching local metadata:', error);
-    return getDefaultMetadata();
-  }
-}
-
-/**
  * Get a specific project by ID
  */
 export async function getProjectById(projectId: string): Promise<Project | null> {
@@ -178,33 +146,6 @@ export async function getCompanyInfo() {
 export async function getServices() {
   const metadata = await fetchSiteMetadata();
   return metadata.services;
-}
-
-/**
- * Default empty metadata template
- */
-function getDefaultMetadata(): SiteMetadata {
-  return {
-    company: {
-      name: 'JLB Constructions',
-      tagline: 'Expert Building Solutions',
-      description: 'Professional construction services',
-      phone: '+1-234-567-8900',
-      email: 'contact@example.com',
-      address: '123 Main Street',
-      city: 'Your City',
-      state: 'State',
-      zipCode: '12345',
-      stats: {
-        projectsCompleted: 0,
-        clientSatisfaction: 95,
-        yearsInBusiness: 20,
-      },
-    },
-    projects: [],
-    services: [],
-    ongoingProjects: [],
-  };
 }
 
 /**
