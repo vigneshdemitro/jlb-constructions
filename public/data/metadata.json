@@ -1,0 +1,295 @@
+{
+  "company": {
+    "name": "JLB Constructions",
+    "tagline": "Expert Building Solutions",
+    "description": "Professional construction company specializing in residential and renovation projects with over 20 years of experience.",
+    "phone": "+919600048063",
+    "email": "jlbconstructions@gmail.com",
+    "address": "Plot No. CS2,11th Street Annai Therasa nagar, Puzhuthivakkam",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "zipCode": "600091",
+    "hours": {
+      "weekday": "Mon-Fri: 9:00 AM - 7:00 PM",
+      "weekend": "Sat: 9:00 AM - 7:00 PM, Sun: 9:00 AM - 12:00 PM"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/jlbengineers/",
+      "instagram": "https://www.instagram.com/jlb_construction25/"
+    },
+    "stats": {
+      "projectsCompleted": 150,
+      "clientSatisfaction": 95,
+      "yearsInBusiness": 20
+    }
+  },
+  "projects": [
+    {
+      "id": "modern-office-complex",
+      "title": "Modern Office Complex",
+      "category": "commercial",
+      "description": "A state-of-the-art commercial building featuring sustainable design, energy-efficient systems, and modern amenities. This project showcases contemporary commercial construction excellence with LEED certification.",
+      "longDescription": "Located in the heart of downtown, this modern office complex was designed to provide a sustainable and productive work environment. The building features state-of-the-art HVAC systems, skylights for natural lighting, and outdoor green spaces for employee wellness.",
+      "date": "2024-06-15",
+      "year": "2024",
+      "status": "completed",
+      "location": "Downtown [City]",
+      "client": "Acme Corporation",
+      "budget": "$5M - $10M",
+      "features": [
+        "LEED Certified",
+        "Sustainable Design",
+        "Modern Amenities",
+        "Open Floor Plans"
+      ],
+      "technologies": [
+        "Green Building Materials",
+        "Energy-Efficient HVAC",
+        "Smart Building System",
+        "Rainwater Harvesting"
+      ],
+      "images": [
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_1",
+          "name": "exterior-front.jpg",
+          "order": 1,
+          "caption": "Exterior front view of the completed building"
+        },
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_2",
+          "name": "lobby.jpg",
+          "order": 2,
+          "caption": "Modern lobby entrance with natural lighting"
+        },
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_3",
+          "name": "office-space.jpg",
+          "order": 3,
+          "caption": "Open office floor plan"
+        }
+      ],
+      "featuredImageId": 0,
+      "tags": [
+        "commercial",
+        "sustainable",
+        "modern",
+        "leed-certified"
+      ]
+    },
+    {
+      "id": "residential-apartment-block",
+      "title": "Residential Apartment Block",
+      "category": "residential",
+      "description": "Luxury residential complex with 200+ units featuring modern amenities, community spaces, and premium finishes. This project represents the pinnacle of residential construction excellence.",
+      "longDescription": "This prestigious residential complex offers 200+ units of luxury living space with world-class amenities including a fitness center, rooftop garden, and community lounge.",
+      "date": "2024-03-20",
+      "year": "2024",
+      "status": "completed",
+      "location": "[City] Heights",
+      "budget": "$50M+",
+      "features": [
+        "Luxury Units",
+        "Community Spaces",
+        "Fitness Center",
+        "Rooftop Garden"
+      ],
+      "technologies": [
+        "High-End Fixtures",
+        "Smart Home Systems",
+        "Secure Access",
+        "Soundproofing"
+      ],
+      "images": [
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_4",
+          "name": "exterior-day.jpg",
+          "order": 1,
+          "caption": "Exterior view of the residential complex"
+        },
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_5",
+          "name": "unit-interior.jpg",
+          "order": 2,
+          "caption": "Luxury unit interior"
+        },
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_6",
+          "name": "amenities.jpg",
+          "order": 3,
+          "caption": "Community amenities area"
+        }
+      ],
+      "featuredImageId": 0,
+      "tags": [
+        "residential",
+        "luxury",
+        "apartments"
+      ]
+    },
+    {
+      "id": "home-renovation-heritage",
+      "title": "Heritage Home Renovation",
+      "category": "renovation",
+      "description": "Complete interior and exterior renovation of a heritage property, preserving architectural character while adding modern features and systems.",
+      "longDescription": "This heritage home required careful restoration of original architectural elements while incorporating modern conveniences and updated systems.",
+      "date": "2023-11-10",
+      "year": "2023",
+      "status": "completed",
+      "location": "Historic District",
+      "client": "Smith Family",
+      "budget": "$500K - $1M",
+      "features": [
+        "Preserved Character",
+        "Modern Systems",
+        "Updated Kitchen",
+        "Expanded Living Space"
+      ],
+      "technologies": [
+        "Historical Restoration",
+        "Modern Electrical",
+        "Updated Plumbing",
+        "Energy-Efficient Windows"
+      ],
+      "images": [
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_7",
+          "name": "before.jpg",
+          "order": 1,
+          "caption": "Before renovation"
+        },
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_8",
+          "name": "after-exterior.jpg",
+          "order": 2,
+          "caption": "After renovation - exterior view"
+        },
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_9",
+          "name": "interior-living.jpg",
+          "order": 3,
+          "caption": "Renovated living space"
+        }
+      ],
+      "featuredImageId": 2,
+      "tags": [
+        "renovation",
+        "heritage",
+        "restoration"
+      ]
+    },
+    {
+      "id": "commercial-warehouse",
+      "title": "Commercial Warehouse",
+      "category": "commercial",
+      "description": "Industrial warehouse complex designed for logistics and storage operations with modern facilities and security systems.",
+      "date": "2023-08-30",
+      "year": "2023",
+      "status": "completed",
+      "location": "Industrial Park",
+      "features": [
+        "High Ceilings",
+        "Loading Docks",
+        "Security System",
+        "Climate Control"
+      ],
+      "images": [
+        {
+          "id": "GOOGLE_DRIVE_FILE_ID_10",
+          "name": "warehouse-exterior.jpg",
+          "order": 1,
+          "caption": "Warehouse exterior"
+        }
+      ],
+      "featuredImageId": 0,
+      "tags": [
+        "commercial",
+        "warehouse",
+        "industrial"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "residential-construction",
+      "title": "Residential Construction",
+      "description": "Custom home building and residential projects tailored to your needs",
+      "icon": "🏠",
+      "features": [
+        "New Construction",
+        "Custom Builds",
+        "Quality Finishes",
+        "On-time Delivery"
+      ]
+    },
+    {
+      "id": "commercial-construction",
+      "title": "Commercial Construction",
+      "description": "Professional commercial projects for businesses and organizations",
+      "icon": "🏢",
+      "features": [
+        "Office Buildings",
+        "Retail Spaces",
+        "Warehouses",
+        "Industrial Facilities"
+      ]
+    },
+    {
+      "id": "renovation-remodeling",
+      "title": "Renovation & Remodeling",
+      "description": "Transform your existing space with professional renovation services",
+      "icon": "🔨",
+      "features": [
+        "Kitchen Remodeling",
+        "Bathroom Updates",
+        "Extensions",
+        "Full Renovations"
+      ]
+    },
+    {
+      "id": "sustainable-building",
+      "title": "Sustainable Building",
+      "description": "Eco-friendly construction using sustainable materials and practices",
+      "icon": "🌱",
+      "features": [
+        "Green Materials",
+        "Energy Efficiency",
+        "LEED Certification",
+        "Carbon Neutral"
+      ]
+    }
+  ],
+  "ongoingProjects": [
+    {
+      "id": "new-residential-complex",
+      "title": "New Residential Complex - Downtown",
+      "description": "High-end residential community featuring luxury units and premium amenities",
+      "progress": 65,
+      "expectedCompletion": "Q3 2024",
+      "startDate": "2024-01-15",
+      "category": "residential"
+    },
+    {
+      "id": "renovation-community-center",
+      "title": "Community Center Renovation",
+      "description": "Comprehensive renovation of the local community center with modern facilities",
+      "progress": 40,
+      "expectedCompletion": "Q4 2024",
+      "startDate": "2024-02-01",
+      "category": "renovation"
+    },
+    {
+      "id": "commercial-retail-expansion",
+      "title": "Retail Center Expansion",
+      "description": "Major expansion of downtown retail center with new shops and dining",
+      "progress": 30,
+      "expectedCompletion": "Q2 2025",
+      "startDate": "2024-03-01",
+      "category": "commercial"
+    }
+  ],
+  "heroContent": {
+    "mainHeading": "Building Dreams, Creating Futures",
+    "subheading": "Transform your vision into reality with our expert construction services. From concept to completion, we deliver excellence in every project.",
+    "ctaText": "Get Your Free Consultation Today"
+  }
+}
