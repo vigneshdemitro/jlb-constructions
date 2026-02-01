@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function Header() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group" aria-label="JLB Constructions Home">
           <div className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:shadow-lg transition-shadow">
-            <span className="text-white font-bold text-lg font-playfair"><img src="/favicon.ico" alt="JLB Constructions Logo" className="w-11 h-11" /></span>
+            <Image src="/icon.jpg" alt="JLB Constructions Logo" width={44} height={44} className="rounded-lg" />
           </div>
           <div className="hidden sm:block">
             <h1 className="text-lg font-bold text-neutral-900 font-playfair">JLB Constructions</h1>
